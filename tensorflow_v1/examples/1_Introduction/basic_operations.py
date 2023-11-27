@@ -10,8 +10,6 @@ from __future__ import print_function
 import tensorflow as tf
 
 # Basic constant operations
-# The value returned by the constructor represents the output
-# of the Constant op.
 a = tf.constant(2)
 b = tf.constant(3)
 
@@ -22,13 +20,10 @@ with tf.Session() as sess:
     print("Multiplication with constants: %i" % sess.run(a*b))
 
 # Basic Operations with variable as graph input
-# The value returned by the constructor represents the output
-# of the Variable op. (define as input when running session)
 # tf Graph input
 a = tf.placeholder(tf.int16)
 b = tf.placeholder(tf.int16)
 
-# Define some operations
 add = tf.add(a, b)
 mul = tf.multiply(a, b)
 
